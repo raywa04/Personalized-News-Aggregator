@@ -20,7 +20,6 @@ NewsAggregator is a personalized news aggregator application that collects news 
 
 ## Project Structure
 
-\`\`\`
 NewsAggregator/
 │
 ├── NewsAggregator.sln
@@ -48,7 +47,7 @@ NewsAggregator/
 │   └── ...
 │
 └── README.md
-\`\`\`
+
 
 ## Getting Started
 
@@ -61,53 +60,51 @@ NewsAggregator/
 
 1. **Clone the repository:**
 
-   \`\`\`bash
+   bash
    git clone https://github.com/yourusername/NewsAggregator.git
    cd NewsAggregator
-   \`\`\`
+   
 
 2. **Set up the solution:**
 
-   \`\`\`bash
+   bash
    dotnet restore
-   \`\`\`
+   
 
 3. **Configure the database:**
 
    Update the connection string in \`NewsAggregator.API/appsettings.json\`:
 
-   \`\`\`json
+   json
    "ConnectionStrings": {
      "DefaultConnection": "Your_Connection_String_Here"
    }
-   \`\`\`
+   
 
 4. **Apply database migrations:**
 
-   \`\`\`bash
+   bash
    cd NewsAggregator.API
    dotnet ef database update
-   \`\`\`
+   
 
 ### Running the Application
 
 1. **Start the Backend API:**
 
-   \`\`\`bash
+   bash
    cd NewsAggregator.API
    dotnet run
-   \`\`\`
 
-   The API will be available at \`https://localhost:5001\`.
+   The API will be available at https://localhost:5001.
 
 2. **Start the Frontend:**
 
-   \`\`\`bash
+   bash
    cd NewsAggregator.Web
    dotnet run
-   \`\`\`
-
-   The frontend will be available at \`https://localhost:5002\`.
+   
+   The frontend will be available at https://localhost:5002.
 
 ### Usage
 

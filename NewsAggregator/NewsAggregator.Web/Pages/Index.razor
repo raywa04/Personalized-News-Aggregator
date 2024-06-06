@@ -1,0 +1,34 @@
+@page "/"
+@inject HttpClient Http
+
+<h3>News Aggregator</h3>
+
+<input type="text" placeholder="Categories" @bind="categories" />
+<input type="text" placeholder="Keywords" @bind="keywords" />
+<button @onclick="LoadNews">Load News</button>
+
+@if (articles != null)
+{
+    <ul>
+        @foreach (var article in articles)
+        {
+            <li>
+                <a href="@article.Url" target="_blank">@article.Title</a>
+                <p>@article.Description</p>
+                <small>@article.Source</small>
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    private string categories;
+    private string keywords;
+    private IEnumerable<NewsArticle> articles;
+
+    private async Task LoadNews()
+    {
+        var response = await Http.GetFromJsonAsync<IEnumerable<NewsArticle>>($"api/news?categories={categories}&keywords={keywords}");
+        articles = response;
+    }
+}

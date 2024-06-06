@@ -18,37 +18,6 @@ NewsAggregator is a personalized news aggregator application that collects news 
 - **Database**: SQL Server or SQLite
 - **External APIs**: NewsAPI, Bing News Search API, or other news sources
 
-## Project Structure
-
-NewsAggregator/
-│
-├── NewsAggregator.sln
-│
-├── NewsAggregator.API/
-│   ├── Controllers/
-│   ├── Models/
-│   ├── Services/
-│   ├── Data/
-│   ├── Program.cs
-│   ├── Startup.cs
-│   └── ...
-│
-├── NewsAggregator.Web/
-│   ├── Pages/
-│   ├── Shared/
-│   ├── wwwroot/
-│   ├── Program.cs
-│   ├── Startup.cs
-│   └── ...
-│
-├── NewsAggregator.Shared/
-│   ├── NewsArticle.cs
-│   ├── UserPreferences.cs
-│   └── ...
-│
-└── README.md
-
-
 ## Getting Started
 
 ### Prerequisites
